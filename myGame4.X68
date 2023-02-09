@@ -37,7 +37,7 @@ GAME_BEGINS:
     
 INITIALISE:
     ; Initialise Sounds
-    BSR     RUN_LOAD                ; Load Run Sound into Memory(in initialise sub-routine)
+    BSR     LOAD_DIE                ; Load Run Sound into Memory(in initialise sub-routine)
 
     ; Screen Size
     MOVE.B  #TC_SCREEN, D0          ; access screen information
@@ -292,14 +292,14 @@ JUMP_DONE:
 * Current Sounds are RUN, JUMP and Opps for Collision
 *-----------------------------------------------------------
 
-RUN_LOAD:
+LOAD_DIE:
     LEA     YOU_HAVE_DIED_WAV,    A1          ; Load Wav File into A1
     MOVE    #SOUND_INDEX, D1          ; Assign it INDEX
     MOVE    #71,        D0          ; Load into memory
     TRAP    #15                     ; Trap (Perform action)
     RTS                             ; Return to subroutine
 
-PLAY_RUN:
+PLAY_DIE:
     MOVE    #SOUND_INDEX, D1          ; Load Sound INDEX
     MOVE    #72,        D0          ; Play Sound
     TRAP    #15                     ; Trap (Perform action)
@@ -408,7 +408,7 @@ COLLISION_CHECK_DONE:               ; No Collision Update points
     RTS                             ; Return to subroutine
 
 COLLISION:
-    BSR     PLAY_RUN
+    BSR     PLAY_DIE
     MOVE.L	#11,D0
 	MOVE.W	#$2010,D1
 	TRAP	#15
@@ -558,6 +558,7 @@ SOUND_INDEX   EQU         00          ; Player Run Sound Index
 
 
     END    START        ; last line of source
+
 
 
 
