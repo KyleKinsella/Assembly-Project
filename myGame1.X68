@@ -476,7 +476,7 @@ ENMY_H_INIT EQU         08          ; Enemy initial Height
 * Section       : Game Stats
 * Description   : Points
 *-----------------------------------------------------------
-POINTS      EQU         05          ; Points added
+POINTS      EQU         01          ; Points added
 
 *-----------------------------------------------------------
 * Section       : Keyboard Keys
@@ -500,6 +500,7 @@ ESCAPE      EQU         $1B         ; Escape ASCII Keycode
 
 
     END    START        ; last line of source
+
 
 
 
