@@ -464,11 +464,6 @@ PLYR_DFLT_G EQU         01          ; Player Default Gravity
 GND_TRUE    EQU         01          ; Player on Ground True
 GND_FALSE   EQU         00          ; Player on Ground False
 
-;RUN_INDEX   EQU         00          ; Player Run Sound Index  
-;JMP_INDEX   EQU         01          ; Player Jump Sound Index  
-;OPPS_INDEX  EQU         02          ; Player Opps Sound Index
-PAC_INDEX    EQU         03
-
 ENMY_W_INIT EQU         08          ; Enemy initial Width
 ENMY_H_INIT EQU         08          ; Enemy initial Height
 
@@ -500,6 +495,7 @@ ESCAPE      EQU         $1B         ; Escape ASCII Keycode
 
 
     END    START        ; last line of source
+
 
 
 
