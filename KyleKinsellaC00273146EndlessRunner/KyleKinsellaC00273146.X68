@@ -437,28 +437,7 @@ COLLISION_CHECK_DONE:               ; No Collision Update points
     ADD.L   #POINTS,    D0        ; Move points upgrade to D1
     ADD.L   PLAYER_SCORE,D1         ; Add to current player score
     MOVE.L  D1, PLAYER_SCORE        ; Update player score in memory
-    ;MOVE.L #POINTS, A2
-    ;LEA POINTS, A2
-    ;MOVE.W (A2), D2    
-    ;SUB.L #05, D1
-    ;CMP D0,D1
-    ;TRAP #15
-    
-    ;LEA $4000, A1
-    ;MOVE.B (A1),D2
-    ;SUB.B D1,D2
-    ;TRAP #15
-
-    ;SUB.L   #01,        ENEMY_X                ; Move enemy by X Value
-    ;ADD.L   #06,   D0               ; Move enemy by X Value                                            ENEMY_X     
-    ;ADD.L   #01,   D1         ; Move enemy by X Value                   ENEMY_X       
-    ;ADD.L D0,D1
-    ;LEA $2000, A1
-    ;MOVE.L (A1),D3
-    ;MOVE.L #14, D3
-    ;SUB.B #02, A1
-    ;TRAP #15   
-    
+      
     RTS                             ; Return to subroutine
 
 COLLISION:
@@ -600,6 +579,8 @@ SPACEBAR    EQU         $20         ; Spacebar ASCII Keycode
 
 
     END    START        ; last line of source
+
+
 
 
 
