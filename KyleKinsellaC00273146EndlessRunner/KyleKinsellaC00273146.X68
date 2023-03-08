@@ -518,7 +518,6 @@ ENEMY_Y         DS.L    01  ; Reserve Space for Enemy Y Position
 
 DIAMETER	DS.W	1 ; this is used to set the size of my character !
 
-
 *----------------------------------------------------------------------------------
 * Section       : Declare messages and sounds
 * Description   : Sound files, which are then loaded and given an address in memory
@@ -579,6 +578,7 @@ SPACEBAR    EQU         $20         ; Spacebar ASCII Keycode
 
 
     END    START        ; last line of source
+
 
 
 
