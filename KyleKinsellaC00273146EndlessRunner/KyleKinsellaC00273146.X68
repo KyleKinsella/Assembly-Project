@@ -34,6 +34,7 @@ GAME_BEGINS:
     MOVE.B #5, D0 ; shows output
     TRAP #15 ; performs action
     
+    
 
 *-----------------------------------------------------------
 * Subroutine    : Initialise
